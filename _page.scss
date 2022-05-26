@@ -1,0 +1,14 @@
+body {
+    // background-color: #222;
+    // color: white;
+    font-family: Arial;
+}
+main {
+    display: flex;
+}
+section {
+    padding:1em;
+    h1 {
+        @include borderBottom;
+    }
+}

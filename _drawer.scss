@@ -1,0 +1,51 @@
+// hw2:modify overlayed drawer
+$color: darkorange;
+$darkColor: createDark($color);
+$midColor: createMid($color);
+$lightColor: createLight($color);
+
+
+body {
+    background-color: $darkColor;
+    color: $lightColor;
+}
+.drawer {
+     background-color: $color;
+     padding: 10px;
+     position: absolute;
+    nav {
+        &:target {
+            width: 300px; 
+            li {
+                a {
+                  font-size: 18px;
+                }
+            }
+        }
+        li {
+            a {
+            color: $lightColor;
+            display: block;
+            padding: 5px 5px 15px 5px;
+            // border: 1px solid red;
+            @include borderBottom;
+            font-size: 0;
+            height: 50px;
+
+            &:hover {
+                background-color: $darkColor;
+                color: orange;
+            }
+        
+            img {
+                filter: invert(100);
+                margin-right: 10px;
+                transform: translateY(10px);
+            }
+        }
+            &:last-child a {
+            border: none;
+            }
+        }
+    }
+}
